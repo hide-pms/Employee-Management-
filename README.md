@@ -1,5 +1,5 @@
 # Application
-This is a Emplyee amanagment application developed in Angular 4 + Firebase 
+This is a Emplyee Mamanagment application developed in Angular 4 + Firebase 
 
 ## Features
 - Login Gmail
