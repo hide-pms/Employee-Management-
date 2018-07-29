@@ -11,17 +11,13 @@ This is a Emplyee amanagment application developed in Angular 4 + Firebase
 - Generate Pdf
 ## Usage
 Run
-git clone https://github.com/codediodeio/angular-firestarter.git firestarter
+git clone https://github.com/hide-pms/Employee-Management-.git Employee-Management-
 cd Employee-Management-
 `npm install`
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-Step - 1 - run npm install
-step 2 - add firebase Details in envoirnemnt 
-example- 
 
 ## Code scaffolding
 
