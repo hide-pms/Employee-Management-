@@ -1,10 +1,21 @@
 # Application
+This is a Emplyee amanagment application developed in Angular + Firebase 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+## Features
+- Add employee 
+- Edit Emplooyee
+- Delete Employee 
+- View Employee List
+- Add Photo 
+- Generate Pdf
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Step - 1 - run npm install
+step 2 - add firebase Details in envoirnemnt 
+example- 
 
 ## Code scaffolding
 
