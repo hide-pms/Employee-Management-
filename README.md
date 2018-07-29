@@ -1,7 +1,8 @@
 # Application
-This is a Emplyee amanagment application developed in Angular + Firebase 
+This is a Emplyee amanagment application developed in Angular 4 + Firebase 
 
 ## Features
+- Login Gmail
 - Add employee 
 - Edit Emplooyee
 - Delete Employee 
