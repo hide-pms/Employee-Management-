@@ -9,6 +9,11 @@ This is a Emplyee amanagment application developed in Angular 4 + Firebase
 - View Employee List
 - Add Photo 
 - Generate Pdf
+## Usage
+Run
+git clone https://github.com/codediodeio/angular-firestarter.git firestarter
+cd Employee-Management-
+`npm install`
 
 ## Development server
 
