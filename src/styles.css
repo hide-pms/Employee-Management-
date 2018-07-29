@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.e-list-height {
+    min-height: 335px;
+}
+
+input.ng-invalid,
+select.ng-invalid {
+    border-left: 7px solid red;
+}
+
+input.ng-valid,
+select.ng-valid {
+    border-left: 7px solid green;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.btn-bs-file {
+    position: relative;
+}
+
+.btn-bs-file input[type="file"] {
+    position: absolute;
+    top: -9999999;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+    cursor: inherit;
+}
+
+#homeTop {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(assets/images/Employee2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}

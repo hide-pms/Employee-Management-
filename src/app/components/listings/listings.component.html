@@ -1,0 +1,36 @@
+<h2> Employee List</h2>
+<hr>
+<!-- <input type="search" class="form-control" placeholder="Please enter search term" [formControl]="searchField">
+<hr/> -->
+<div class="container">
+    <div align="center">
+        <app-loadin-s *ngIf="showSpinner"></app-loadin-s>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6" *ngFor="let listing of listings">
+
+            <div class="card hovercard e-list-height">
+                <div class="cardheader">
+                </div>
+                <div class="avatar">
+                    <img alt="" [src]="listing.imageUrl">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <h3 target="_blank">{{listing.firstName}} {{listing.lastName}}</h3>
+                    </div>
+                    <div class="desc"><strong></strong>{{listing.jobPost}}</div>
+                    <div class="desc"><strong></strong>{{listing.MobileNumber}} </div>
+                    <div class="desc"><strong></strong>{{listing.birthDate}} </div>
+                </div>
+                <div class="bottom">
+                    <a [routerLink]="['/listing/'+listing.$key]" class="btn btn-primary btn-block btn-sm">
+View More
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

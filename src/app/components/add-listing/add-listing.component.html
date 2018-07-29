@@ -1,0 +1,216 @@
+<a [routerLink]="['/listings']" class="btn-primary btn-md btn pull-right"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back </a>
+
+<h2 class="page-header">Add Employee Detail</h2>
+<hr>
+<form [formGroup]="userForm" (ngSubmit)="onAddSubmit(userForm.value)" novalidate>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>First Name</label>
+                <input class="form-control" #refName type="text" formControlName="firstName">
+            </div>
+            <div *ngIf="!userForm.controls.firstName?.valid && (userForm.controls.firstName?.dirty ||userForm.controls.firstName?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.firstName.errors.required">
+                    First Name is required
+                </div>
+                <div [hidden]="!userForm.controls.firstName.errors.pattern">
+                    Only alphabetsallowed
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Middle Name</label>
+                <input class="form-control" type="text" #refmiddleName formControlName="middleName">
+            </div>
+
+            <div *ngIf="!userForm.controls.middleName?.valid && (userForm.controls.middleName?.dirty ||userForm.controls.middleName?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.middleName.errors.required">
+                    Middle Name is required
+                </div>
+                <div [hidden]="!userForm.controls.middleName.errors.pattern">
+                    Only alphabetsallowed
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Last Name</label>
+                <input class="form-control" type="text" #reflastName formControlName="lastName">
+            </div>
+            <div *ngIf="!userForm.controls.lastName?.valid && (userForm.controls.lastName?.dirty ||userForm.controls.lastName?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.lastName.errors.required">
+                    Last Name is required
+                </div>
+                <div [hidden]="!userForm.controls.lastName.errors.pattern">
+                    Only alphabetsallowed
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Job Post</label>
+                <input class="form-control" type="text" #refjobPost formControlName="jobPost">
+            </div>
+            <div *ngIf="!userForm.controls.jobPost?.valid && (userForm.controls.jobPost?.dirty ||userForm.controls.jobPost?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.jobPost.errors.required">
+                    Job Post is required
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Email id</label>
+                <input class="form-control" type="text" #refemailId formControlName="emailId">
+            </div>
+            <div *ngIf="!userForm.controls.emailId?.valid && (userForm.controls.emailId?.dirty ||userForm.controls.emailId?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.emailId.errors.required">
+                    Please enter correct Email id.
+                </div>
+                <div [hidden]="!userForm.controls.emailId.errors.pattern">
+                    Email ID should be Ex.- <small><b>joe@abc.com</b></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Mobile </label>
+                <input class="form-control" type="text" #refMobileNumber formControlName="MobileNumber">
+            </div>
+            <div *ngIf="!userForm.controls.MobileNumber?.valid && (userForm.controls.MobileNumber?.dirty ||userForm.controls.MobileNumber?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.MobileNumber.errors.required">
+                    Mobile number is required
+                </div>
+                <div [hidden]="!userForm.controls.MobileNumber.errors.minlength">
+                    Mobile number min Length is 10
+                </div>
+                <div [hidden]="!userForm.controls.MobileNumber.errors.maxlength">
+                    Mobile number max Length is 10
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Birth Date</label>
+                <input class="form-control" type="date" #refbirthDate formControlName="birthDate">
+
+            </div>
+            <div *ngIf="!userForm.controls.birthDate?.valid && (userForm.controls.birthDate?.dirty ||userForm.controls.birthDate?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.birthDate.errors.required">
+                    Birth Date is required
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Pan Number</label>
+                <input class="form-control" type="text" minLength="10" #refpanNumber formControlName="panNumber">
+            </div>
+            <div *ngIf="!userForm.controls.panNumber?.valid && (userForm.controls.panNumber?.dirty ||userForm.controls.panNumber?.touched)" class="alert alert-danger">
+                <div [hidden]="!userForm.controls.panNumber.errors.required">
+                    Pan number is required
+                </div>
+                <div [hidden]="!userForm.controls.panNumber.errors.minlength">
+                    Pan number min Length is 10
+                </div>
+                <div [hidden]="!userForm.controls.panNumber.errors.maxlength">
+                    Pan number max Length is 10
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>UAN Number</label>
+                <input class="form-control" type="text" #refuanNumber formControlName="uanNumber">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>PF Number</label>
+                <input class="form-control" type="text" #refpfNumber formControlName="pfNumber">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Packege</label>
+                <input class="form-control" type="text" #refpackege formControlName="packege">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Blood Group</label>
+                <select class="form-control" #refbloodGroup formControlName="bloodGroup">
+                    <option value="O +">O +</option>
+                    <option value="O -">O -</option>
+                    <option value="A +">A +</option>
+                    <option value="A -">A - </option>
+                     <option value="B +">B +</option>
+                    <option value="B -">B -</option>
+                    <option value="AB +">AB +</option>
+                    <option value="AB -">AB - </option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Address</label>
+                <input class="form-control" type="text" #refaddress formControlName="address">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>City</label>
+                <input class="form-control" type="text" #refcity formControlName="city">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>State</label>
+                <input class="form-control" type="text" #refstate formControlName="state">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Zip</label>
+                <input class="form-control" type="text" #refzip formControlName="zip">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Employee Photo : </label>
+                <label class="btn-bs-file btn btn-sm btn-primary">
+                Browse
+                <input id="image" #refimage formControlName="image" type="file">
+            </label>
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="form-group ">
+        <div>
+            <button type="submit " class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+        </div>
+    </div>
+    <br>
+    <!-- 
+    <input type="submit" value="submit" class="btn btn-success"> -->
+</form>
